@@ -1,23 +1,12 @@
 <head>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
   <meta charset="utf-8">
   <meta name="theme-color" content="#000000">
   <link rel="stylesheet" href="styles.css">
   <title>THE HOSHI PROJECT</title>
 </head>
 <style>
-  .container {
-    position: relative;
-    width: 1000px height: 250px;
-  }
-
-  canvas { 
-    position: absolute;
-    top: 250;
-    bottom: 250;
-    left: 0;
-    z-index: 2; 
-  }
 
     #intro h1 {
         font-size: 2rem;
@@ -25,37 +14,53 @@
         font-family: Heading;
     }
 
-  .overlay-text {
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Ensure body takes full viewport height */
+    overflow: auto; /* Enable scrolling if content overflows */
+    background-color: black; /* Optional, to match your styling */
+}
+
+.container {
+    position: relative;
+    width: 100%; /* Allow it to expand naturally */
+    height: auto; /* Remove fixed height */
+}
+
+#intro {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 3rem;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+#main-content {
+    display: none;
+    text-align: center;
+    color: white;
+    padding: 20px; /* Add some padding for content */
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.overlay-text {
     position: absolute;
     top: 200px;
     left: 650px;
-    bottom: 0px;
     z-index: 2;
-    /* Ensure it's above the canvas */
     color: white;
     font-size: 24px;
-    font-family: Heading;
-  }
-
-  /* Intro text styling */
-        #intro {
-            position: absolute; /* Take the intro text out of the normal flow */
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Adjust the position to be exactly in the center */
-            text-align: center;
-            font-size: 3rem;
-            color: #FFFFFF;
-            white-space: nowrap; /* Prevent text from wrapping */
-            visibility: visible; /* Ensure intro is visible */
-        }
-
-        /* Hide content by default */
-        #main-content {
-            display: none; /* Main content is hidden initially */
-            text-align: center;
-            color: white;
-        }
+}
 
   /* CSS */
   .content {
