@@ -1,0 +1,236 @@
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="theme-color" content="#000000">
+  <link rel="stylesheet" href="styles.css">
+  <title>THE HOSHI PROJECT</title>
+</head>
+<style>
+  .container {
+    position: relative;
+    width: 1000px height: 250px;
+  }
+
+  canvas { 
+    position: absolute;
+    top: 250;
+    bottom: 250;
+    left: 0;
+    z-index: 2; 
+  }
+
+    #intro h1 {
+        font-size: 2rem;
+        padding-top: 50px;
+        font-family: Heading;
+    }
+
+  .overlay-text {
+    position: absolute;
+    top: 200px;
+    left: 650px;
+    bottom: 0px;
+    z-index: 2;
+    /* Ensure it's above the canvas */
+    color: white;
+    font-size: 24px;
+    font-family: Heading;
+  }
+
+  /* Intro text styling */
+        #intro {
+            position: absolute; /* Take the intro text out of the normal flow */
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust the position to be exactly in the center */
+            text-align: center;
+            font-size: 3rem;
+            color: #FFFFFF;
+            white-space: nowrap; /* Prevent text from wrapping */
+            visibility: visible; /* Ensure intro is visible */
+        }
+
+        /* Hide content by default */
+        #main-content {
+            display: none; /* Main content is hidden initially */
+            text-align: center;
+            color: white;
+        }
+
+  /* CSS */
+  .content {
+    display: none;
+  }
+
+  .content.active {
+    display: block;
+  }
+</style>
+
+<body>
+
+
+  <center>
+
+    <!-- Intro Text Section -->
+<div id="intro">
+    <h1></h1> <!-- This will display the changing text -->
+</div>
+
+<!-- Main Content Section (hidden during the intro animation) -->
+<div id="main-content">
+    
+<canvas id="cv"></canvas>
+ 
+    <div class="container">
+
+      <div class="overlay-text">
+
+
+        <h1></h1>
+        <h1></h1>
+
+        <h1>THE HOSHI PROJECT</h1>
+        <p>Welcome to The Hoshi Project 2.0</p>
+
+
+        <!-- What is Hoshi -->
+        <div class="panel">
+          <h1>What is The Hoshi Project?</h1>
+          <p>THE HOSHI PROJECT used to be a free cheat service provider that is fully ran by an cloud based Aurora
+            System. (You can find out more about Aurora below.) but now, we are back as a provider of Aurora!</p>
+        </div>
+
+
+            <!-- What is aurora -->
+          <div class="panel">
+            <h1>Whats aurora?</h1>
+            <p>You can look at it like this, aurora is a type of energy, that is user for many databases in many
+              Network servers around the world, we only have limited amount of aurora to use, thats why we have a limited registrants
+              amount. If this Aurora gets used wrongly, all other systems could corrupt, resulting in the whole systems
+              crashing altogether. thats why Connet is helping us during this process and providing us with the perfect
+              Aurora Amount for our needs.</p>
+          </div>
+
+            <!-- What is our goal -->
+            <div class="panel">
+              <h1>What is our goal</h1>
+              <p>Now, we are just trying to provide a save Aurora Providing Network for many users to use.</p>
+            </div>
+
+              <!-- What do we offer -->
+              <div class="panel">
+                <h1>What do we offer</h1>
+                <p>We are planning on maybe providing cheats again, but currently we are really only managing aurora at the moment.</p>
+              </div>
+
+                <!-- Where do register/login/all other pages -->
+                <div class="panel">
+                  <h1>Our Communities</h1>
+                  <p>Where you can contact, register, talk to other members, talk in a public discord etc!</p>
+
+                  <!-- ADDING A HREF SOON -->
+
+                  <a href="Discord.gg/etc">
+                  <button class="button">Our Discord</button>
+	                </a>
+
+                  <a href="">
+                  <button class="button">Hoshi Compendium (still being done)</button>
+	                </a>
+
+                  <p>More information about the providers</p>
+
+                  <a href="">
+                  <button class="button">The Representative</button>
+	                </a>
+
+                  <a href="Haiku">
+                  <button class="button">The Representative</button>
+	                </a>
+
+                </div>
+
+                <!-- Current Status -->
+                <div class="panel">
+                  <h1>Current Status</h1>
+                  <p>Current registrants: </p>
+                  <p>Update on aurora: </p>
+                  <p>Update on aurora unlock (more info soon.): </p>
+
+                </div>
+
+</div>
+
+
+            <script>
+
+               function PlayText() {
+        // Animate the text by setting HTML content at specific intervals
+        setTimeout(function(){ $("#intro h1").html("GAT_") }, 100);
+        setTimeout(function(){ $("#intro h1").html("GATES\\") }, 200);
+        setTimeout(function(){ $("#intro h1").html("GATES OP|") }, 300);
+        setTimeout(function(){ $("#intro h1").html("GATES OPEN/") }, 400);
+        setTimeout(function(){ $("#intro h1").html("GATES OPEN-") }, 500);
+        setTimeout(function(){ $("#intro h1").html("GATES OPEN\\") }, 600);
+        setTimeout(function(){ $("#intro h1").html("GATES OPEN|") }, 700);
+        setTimeout(function(){ $("#intro h1").html("GATES OPEN/") }, 800);
+        setTimeout(function(){ $("#intro h1").html("GATES OPEN-") }, 900);
+        setTimeout(function(){ $("#intro h1").html("GATES O\\") }, 1000);
+        setTimeout(function(){ $("#intro h1").html("GAT|") }, 1100);
+        setTimeout(function(){ $("#intro h1").html("/") }, 1200);
+        setTimeout(function(){ $("#intro h1").html("-") }, 1300);
+        setTimeout(function(){ $("#intro h1").html("\\") }, 1400);
+        setTimeout(function(){ $("#intro h1").html("Unli|") }, 1500);
+        setTimeout(function(){ $("#intro h1").html("Unlink t/") }, 1600);
+        setTimeout(function(){ $("#intro h1").html("Unlink the wor-") }, 1700);
+        setTimeout(function(){ $("#intro h1").html("Unlink the world.<br>Un\\") }, 1800);
+        setTimeout(function(){ $("#intro h1").html("Unlink the world.<br>Unlock th|") }, 1900);
+        setTimeout(function(){ $("#intro h1").html("Unlink the world.<br>Unlock the rest./") }, 2000);
+        setTimeout(function(){ $("#intro h1").html("Unlink the world.<br>Unlock the rest.") }, 2100);
+
+        // After the intro finishes, show the main content
+        setTimeout(function() {
+            $("#intro").fadeOut(); // Hide intro text
+            $("#main-content").fadeIn(); // Show main content
+        }, 2500); // Matches the final timeout of the intro text
+    }
+
+    $(document).ready(function(){
+        PlayText(); // Start the animation on page load
+    });
+
+              //ADD AUDIO
+
+const ambience = new Audio('https://classic.systemspace.network/res/audio/ambience/7.ogg1');
+            const main = new Audio('https://classic.systemspace.network/res/audio/bgm/superbgm.ogg1');
+            const intro = new Audio('https://classic.systemspace.network/res/audio/sfx/welcome.ogg1');
+            const ambience2 = new Audio('https://classic.systemspace.network/res/audio/ambience/2.ogg1');
+
+            main.loop = true;
+            ambience.loop = true;
+            intro.loop = false;
+            ambience2.loop = true;
+
+            PlayText();
+
+            // Intro
+            intro.play();
+
+            // Ambience
+            ambience.play();
+
+            // Play the second audio after a 2.3-second delay
+            setTimeout(() => {
+                main.play();
+                ambience2.play
+            }, 2300); // 2300 ms = 2.3 seconds
+
+            // Play the third audio after a 5-second delay (total delay = 5s)
+            setTimeout(() => {
+                //.play();
+            }, 5000); // 5000 ms = 5 seconds
+            </script>
+
+  </center>
