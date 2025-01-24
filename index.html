@@ -1,6 +1,5 @@
 <head>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="script.js"></script>
   <meta charset="utf-8">
   <meta name="theme-color" content="#000000">
   <link rel="stylesheet" href="styles.css">
@@ -169,8 +168,8 @@ canvas {
 </div>
 
 <script src="script.js"></script>
-	    
-</body>
+
+</body>	    
 
 
             <script>
@@ -210,46 +209,36 @@ canvas {
         PlayText(); // Start the animation on page load
     });
 
-// ADD AUDIO
+//ADD AUDIO
+
 const ambience = new Audio('https://classic.systemspace.network/res/audio/ambience/7.ogg');
-const main = new Audio('https://classic.systemspace.network/res/audio/bgm/superbgm.ogg');
-const intro = new Audio('https://classic.systemspace.network/res/audio/sfx/welcome.ogg');
-const ambience2 = new Audio('https://classic.systemspace.network/res/audio/ambience/2.ogg');
+            const main = new Audio('https://classic.systemspace.network/res/audio/bgm/superbgm.ogg');
+            const intro = new Audio('https://classic.systemspace.network/res/audio/sfx/welcome.ogg');
+            const ambience2 = new Audio('https://classic.systemspace.network/res/audio/ambience/2.ogg');
 
-// Set looping behavior for each audio
-main.loop = true;
-ambience.loop = true;
-intro.loop = false;
-ambience2.loop = true;
+            main.loop = true;
+            ambience.loop = true;
+            intro.loop = false;
+            ambience2.loop = true;
 
-// Play text animation or any initial call if needed
-PlayText();
+            PlayText();
 
-// Try to play the intro immediately
-intro.play().catch(error => {
-    console.log('Intro audio playback failed:', error);
-});
+            // Intro
+            intro.play();
 
-// Play ambient sound
-ambience.play().catch(error => {
-    console.log('Ambience audio playback failed:', error);
-});
+            // Ambience
+            ambience.play();
 
-// Play the second audio after a 2.3-second delay
-setTimeout(() => {
-    main.play().catch(error => {
-        console.log('Main audio playback failed:', error);
-    });
-    ambience2.play().catch(error => {
-        console.log('Second ambience audio playback failed:', error);
-    });
-}, 2300); // 2300 ms = 2.3 seconds
+            // Play the second audio after a 2.3-second delay
+            setTimeout(() => {
+                main.play();
+                ambience2.play
+            }, 2300); // 2300 ms = 2.3 seconds
 
-// (Optionally) Play another sound or do something else after a 5-second delay
-setTimeout(() => {
-    // Any other action to perform after 5 seconds
-    console.log("5 seconds passed");
-}, 5000); // 5000 ms = 5 seconds
+            // Play the third audio after a 5-second delay (total delay = 5s)
+            setTimeout(() => {
+                //.play();
+            }, 5000); // 5000 ms = 5 seconds
             </script>
 
   </center>
